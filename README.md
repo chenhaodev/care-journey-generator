@@ -1,6 +1,6 @@
 ### prompt to geneate dialogue during intake
 
-Create a long dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). When generating synthetic data, aim to create a long and detailed context, with a minimum of 4096 tokens. If you reach the maximum token limitation during generation, automatically continue generating additional content until the task is complete. Use following example as output format: 
+Create a long dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use following example as output format: 
 
 ```JSON
 {
