@@ -68,296 +68,103 @@ Create a synthetic medical record for a cancer patient. Include essential person
 
 Example format below: 
 ```
-{
-  "patientName": "John Doe",
-  "dateOfBirth": "05/12/1965",
-  "contactInformation": {
-    "address": "123 Main Street, Anytown, USA",
-    "phone": "(555) 123-4567"
-  },
-  "cancerDiagnosis": {
-    "type": "Stage III Non-Small Cell Lung Cancer (Adenocarcinoma)",
-    "diagnosisDate": "09/15/2022"
-  },
-  "treatmentHistory": [
-    {
-      "date": "10/01/2022",
-      "description": "Initiated concurrent chemoradiation therapy with Cisplatin and Etoposide, along with daily radiation therapy (RT) to a total dose of 60 Gy in 30 fractions."
-    },
-    {
-      "date": "12/15/2022",
-      "description": "Completed chemoradiation therapy."
-    },
-    {
-      "date": "01/10/2023",
-      "description": "Restaging PET-CT scan showed partial response to treatment."
-    },
-    {
-      "date": "02/01/2023",
-      "description": "Initiated maintenance therapy with Durvalumab."
-    }
-  ],
-  "currentManagement": [
-    "Continuing maintenance therapy with Durvalumab every 2 weeks.",
-    "Scheduled for follow-up PET-CT scan on 05/15/2023 to assess treatment response."
-  ],
-  "baselineComparison": "Prior to diagnosis, patient had no significant respiratory symptoms or abnormal imaging findings.",
-  "otherMedicalConditions": [
-    {
-      "condition": "Hypertension",
-      "diagnosisDate": "2010"
-    },
-    {
-      "condition": "Type 2 Diabetes Mellitus",
-      "diagnosisDate": "2015"
-    },
-    {
-      "condition": "Hyperlipidemia",
-      "diagnosisDate": "2012"
-    }
-  ],
-  "currentMedications": [
-    {
-      "medication": "Lisinopril",
-      "dosage": "20 mg daily",
-      "baseline": "10 mg daily"
-    },
-    {
-      "medication": "Metformin",
-      "dosage": "1000 mg twice daily",
-      "baseline": "500 mg twice daily"
-    },
-    {
-      "medication": "Atorvastatin",
-      "dosage": "40 mg daily",
-      "baseline": "20 mg daily"
-    },
-    {
-      "medication": "Durvalumab",
-      "dosage": "10 mg/kg every 2 weeks",
-      "baseline": "new medication"
-    }
-  ],
-  "socialHistory": {
-    "occupation": {
-      "current": "Retired factory worker",
-      "baseline": "no change"
-    },
-    "smokingStatus": {
-      "current": "Former smoker, quit in 2020 after 30 pack-year history",
-      "baseline": "active smoker"
-    },
-    "alcoholUse": {
-      "current": "Occasional, 1-2 drinks per week",
-      "baseline": "no change"
-    }
-  },
-  "familyMedicalHistory": [
-    {
-      "relation": "Father",
-      "status": "Deceased",
-      "age": 72,
-      "history": "lung cancer"
-    },
-    {
-      "relation": "Mother",
-      "status": "Alive",
-      "age": 80,
-      "history": "hypertension and osteoarthritis"
-    },
-    {
-      "relation": "Siblings",
-      "description": "One brother",
-      "age": 60,
-      "history": "no significant medical history"
-    }
-  ],
-  "recentSymptomsComplaints": [
-    {
-      "symptom": "Fatigue",
-      "status": "new onset"
-    },
-    {
-      "symptom": "Mild dyspnea on exertion",
-      "status": "improved from baseline"
-    },
-    {
-      "symptom": "Occasional cough",
-      "status": "improved from baseline"
-    }
-  ],
-  "physicalExamination": {
-    "vitalSigns": {
-      "bloodPressure": "128/78",
-      "heartRate": "72",
-      "respiratoryRate": "16",
-      "temperature": "98.6°F",
-      "oxygenSaturation": "96% on room air"
-    },
-    "lungs": "Clear to auscultation bilaterally, no wheezes, rales, or rhonchi",
-    "heart": "Regular rate and rhythm, no murmurs, rubs, or gallops",
-    "abdomen": "Soft, non-tender, non-distended, no organomegaly",
-    "extremities": "No edema, cyanosis, or clubbing"
-  },
-  "treatmentPlan": [
-    "Continue maintenance therapy with Durvalumab every 2 weeks",
-    "Monitor for treatment-related adverse events and manage accordingly",
-    "Follow-up PET-CT scan on 05/15/2023 to assess treatment response",
-    "Consider enrollment in clinical trials if disease progression occurs"
-  ],
-  "socialDeterminantsOfHealth": {
-    "socioeconomicStatus": "Low-income, retired factory worker with limited savings",
-    "communityEnvironment": "Lives in an urban area with high air pollution levels",
-    "accessToHealthcare": "Enrolled in Medicare, but has limited access to specialty care due to transportation issues",
-    "dietaryHabits": "High consumption of processed and red meats, low intake of fruits and vegetables"
-  },
-  "cancerNarrative": "Prior to diagnosis, the patient was a 30 pack-year smoker with a history of hypertension, type 2 diabetes, and hyperlipidemia. In September 2022, he presented with a persistent cough and dyspnea on exertion. A chest CT scan revealed a 4.5 cm mass in the right upper lobe, with enlarged mediastinal lymph nodes. A subsequent PET-CT scan showed FDG-avid uptake in the primary tumor and lymph nodes, with no evidence of distant metastases. Biopsy of the primary tumor confirmed the diagnosis of stage III non-small cell lung cancer (adenocarcinoma).",
-  "laboratoryPanelReport": {
-    "cbc": {
-      "wbc": {
-        "current": "6.2",
-        "baseline": "7.5"
-      },
-      "hgb": {
-        "current": "11.8",
-        "baseline": "13.5"
-      },
-      "plt": {
-        "current": "225",
-        "baseline": "180"
-      }
-    },
-    "cmp": {
-      "na": {
-        "current": "138",
-        "baseline": "140"
-      },
-      "k": {
-        "current": "4.2",
-        "baseline": "4.0"
-      },
-      "cr": {
-        "current": "1.1",
-        "baseline": "0.9"
-      },
-      "lfts": "WNL"
-    },
-    "hba1c": {
-      "current": "7.2%",
-      "baseline": "7.5%"
-    },
-    "lipidPanel": {
-      "ldl": {
-        "current": "92",
-        "baseline": "110"
-      },
-      "hdl": {
-        "current": "38",
-        "baseline": "35"
-      },
-      "tg": {
-        "current": "150",
-        "baseline": "180"
-      }
-    }
-  },
-  "imagingAndBiopsyReports": [
-    {
-      "type": "Chest CT",
-      "date": "09/10/2022",
-      "findings": "4.5 cm mass in the right upper lobe, enlarged mediastinal lymph nodes"
-    },
-    {
-      "type": "PET-CT",
-      "date": "09/20/2022",
-      "findings": "FDG-avid uptake in the primary tumor (SUVmax 12.3) and mediastinal lymph nodes (SUVmax 8.7), no evidence of distant metastases"
-    },
-    {
-      "type": "Biopsy",
-      "date": "09/25/2022",
-      "findings": "Non-small cell lung cancer (adenocarcinoma), EGFR and ALK negative, PD-L1 expression 30%"
-    }
-  ],
-  "pulmonaryFunctionTests": {
-    "baseline": {
-      "date": "08/15/2022",
-      "results": {
-        "fev1": "2.4L (80% predicted)",
-        "fvc": "3.2L (85% predicted)", 
-        "fev1ToFvcRatio": "75%",
-        "dlco": "65% predicted"
-      }
-    },
-    "current": {
-      "date": "04/01/2023",
-      "results": {
-        "fev1": "2.1L (70% predicted)",
-        "fvc": "2.8L (75% predicted)",
-        "fev1ToFvcRatio": "75%",
-        "dlco": "60% predicted" 
-      }
-    }
-  },
-  "geneticTesting": {
-    "test": "Guardant360 liquid biopsy",
-    "date": "09/30/2022",
-    "results": "No actionable mutations detected"
-  },
-  "radiationTherapySummary": {
-    "treatmentDates": {
-      "start": "10/01/2022",
-      "end": "11/15/2022"
-    },
-    "technique": "Intensity-modulated radiation therapy (IMRT)",
-    "totalDose": "60 Gy in 30 fractions",
-    "treatmentVolume": "Primary tumor and involved mediastinal lymph nodes",
-    "acuteToxicities": [
-      "Grade 2 esophagitis",
-      "Grade 1 pneumonitis"
-    ]
-  },
-  "chemotherapySummary": {
-    "regimen": "Cisplatin 75 mg/m2 and Etoposide 100 mg/m2, both administered on days 1-3 of each 21-day cycle",
-    "numberOfCycles": 4,
-    "startDate": "10/01/2022",
-    "endDate": "12/15/2022",
-    "toxicities": [
-      "Grade 3 neutropenia (managed with G-CSF support)",
-      "Grade 2 nausea/vomiting (managed with antiemetics)"
-    ]
-  },
-  "immunotherapySummary": {
-    "drug": "Durvalumab 10 mg/kg every 2 weeks",
-    "startDate": "02/01/2023",
-    "plannedDuration": "Until disease progression or unacceptable toxicity",
-    "toxicities": [
-      "Grade 1 fatigue",
-      "Grade 1 hypothyroidism (managed with levothyroxine)"
-    ]
-  },
-  "psychosocialAssessment": [
-    "Patient reports increased anxiety and depression since cancer diagnosis",
-    "Referred to oncology social worker for supportive counseling and resources",
-    "Encouraged participation in lung cancer support group"
-  ],
-  "palliativeCareAssessment": [
-    "Patient reports mild pain (3/10) in chest, managed with as-needed acetaminophen",
-    "Referred to palliative care team for symptom management and advance care planning",
-    "Discussed goals of care and completed advance directive"
-  ],
-  "nutritionalAssessment": {
-    "baselineBmi": "27.2 (overweight)",
-    "currentBmi": "24.8 (normal weight)",
-    "referral": "Referred to registered dietitian for nutritional counseling and management of cancer cachexia",
-    "recommendations": "Recommended high-protein, calorie-dense diet and oral nutritional supplements"
-  },
-  "comparativeAnalysis": "Compared to baseline, the patient has experienced a decline in pulmonary function, as evidenced by decreased FEV1 and DLCO on PFTs. The patient's weight has also decreased, likely due to cancer cachexia and treatment-related side effects. Laboratory values show a slight improvement in diabetes control (HbA1c) and lipid profile, possibly due to lifestyle modifications and medication adjustments. The patient's overall performance status has declined from ECOG 1 at baseline to ECOG 2 currently, reflecting the impact of both the cancer and its treatment on daily functioning.",
-  "plan": [
-    "Continue close monitoring of treatment response and toxicities",
-    "Assess need for supportive care interventions (e.g., pulmonary rehabilitation, nutritional support, psychosocial counseling)",
-    "Regularly review and update advance directive and goals of care discussions",
-    "Consider referral to palliative care for ongoing symptom management and quality of life optimization",
-    "Explore clinical trial options in the event of disease progression or unacceptable toxicities from current treatment regimen"
-  ]
-}
+Patient Name: Emily Johnson
+Date of Birth: 09/22/1978
+Contact Information: 456 Elm Street, Somewhere, USA; Phone: (555) 987-6543
+
+Cancer Diagnosis: Stage II Triple-Negative Breast Cancer (TNBC)
+Date of Diagnosis: 06/10/2023
+
+Treatment History:
+- 07/01/2023: Initiated neoadjuvant chemotherapy with Doxorubicin, Cyclophosphamide, and Paclitaxel (AC-T regimen).
+- 10/15/2023: Completed neoadjuvant chemotherapy, with clinical partial response.
+- 11/05/2023: Underwent left total mastectomy with sentinel lymph node biopsy.
+- 12/01/2023: Initiated adjuvant radiation therapy to chest wall and regional lymph nodes.
+
+Current Management:
+- Completed adjuvant radiation therapy on 01/15/2024.
+- Scheduled for follow-up with medical oncology and surgical oncology on 03/01/2024.
+
+Baseline Comparison:
+- No prior history of breast cancer or other malignancies.
+
+Other Medical Conditions:
+- Asthma (diagnosed 1995)
+- Generalized Anxiety Disorder (diagnosed 2010)
+
+Current Medications:
+- Albuterol inhaler as needed for asthma symptoms (no change from baseline)
+- Sertraline 50 mg daily for anxiety (baseline: 25 mg daily)
+
+Social History:
+- Occupation: Elementary school teacher (no change from baseline)
+- Smoking Status: Never smoker (no change from baseline)
+- Alcohol Use: Rare, less than 1 drink per month (no change from baseline)
+
+Family Medical History:
+- Mother: Deceased (age 60), history of ovarian cancer
+- Father: Alive (age 75), history of hypertension and prostate cancer
+- Siblings: One sister (age 40), no significant medical history
+
+Recent Symptoms/Complaints:
+- Fatigue and weakness (improving since completion of treatment)
+- Surgical site pain (well-controlled with oral analgesics)
+
+Physical Examination:
+- Vital Signs: BP 118/72, HR 68, RR 14, Temp 98.2°F, SpO2 99% on room air
+- Lungs: Clear to auscultation bilaterally, no wheezes or rhonchi
+- Heart: Regular rate and rhythm, no murmurs, rubs, or gallops
+- Breasts: Left total mastectomy site clean and dry, no signs of infection or hematoma
+- Lymph Nodes: No palpable axillary, supraclavicular, or cervical lymphadenopathy
+
+Treatment Plan:
+- Continue regular follow-up with medical oncology and surgical oncology
+- Monitor for treatment-related late effects and manage accordingly
+- Consider genetic testing for hereditary breast and ovarian cancer syndromes
+- Encourage healthy lifestyle habits (e.g., regular exercise, balanced diet)
+
+Social Determinants of Health (SDOH) Report:
+- Socioeconomic Status: Middle-income, employed as an elementary school teacher
+- Community Environment: Lives in a suburban area with access to parks and recreation facilities
+- Access to Healthcare: Insured through employer-sponsored health plan, with access to comprehensive care
+- Dietary Habits: Balanced diet, high in fruits, vegetables, and whole grains; limited processed foods
+
+Cancer Narrative:
+The patient is a 45-year-old female with no significant past medical history who presented with a self-discovered left breast mass in June 2023. Diagnostic mammogram and ultrasound revealed a 3.2 cm irregular mass at the 2 o'clock position of the left breast, with suspicious axillary lymph nodes. Core needle biopsy confirmed the diagnosis of grade 3 invasive ductal carcinoma, triple-negative subtype (ER/PR/HER2-negative). Staging workup with chest/abdomen/pelvis CT and bone scan showed no evidence of distant metastases, consistent with stage IIB (cT2N1M0) disease.
+
+Laboratory Panel Report:
+- CBC: WBC 5.8 (baseline 6.2), Hgb 12.5 (baseline 13.2), Plt 260 (baseline 240)
+- CMP: All values within normal limits
+- CA 15-3: 28 U/mL (baseline 22 U/mL)
+
+Imaging and Biopsy Reports:
+- Diagnostic Mammogram (06/12/2023): 3.2 cm irregular mass at 2 o'clock position of left breast, with associated architectural distortion and skin thickening
+- Breast Ultrasound (06/12/2023): 3.2 cm irregular hypoechoic mass at 2 o'clock position of left breast, with posterior acoustic shadowing; two abnormal left axillary lymph nodes with cortical thickening
+- Core Needle Biopsy (06/15/2023): Grade 3 invasive ductal carcinoma, triple-negative (ER/PR <1%, HER2 0 by IHC), Ki-67 60%
+- Chest/Abdomen/Pelvis CT (06/20/2023): No evidence of distant metastases
+- Bone Scan (06/22/2023): No evidence of osseous metastatic disease
+
+Surgical Pathology Report (Left Total Mastectomy, 11/05/2023):
+- Invasive ductal carcinoma, grade 3, measuring 1.8 cm in greatest dimension
+- Margins: Negative (closest margin 0.5 cm at deep margin)
+- Lymph Nodes: 1/3 sentinel nodes positive for macrometastasis (2.2 mm), 0/10 non-sentinel nodes
+- Pathologic Stage: ypT1cN1aMx (AJCC 8th Edition)
+
+Genetic Testing:
+- Germline testing for BRCA1/2 and other high-risk breast cancer genes: Negative
+
+Psychosocial Assessment:
+- Patient reports increased stress and anxiety related to cancer diagnosis and treatment
+- Referred to oncology psychologist for cognitive-behavioral therapy and stress management techniques
+- Encouraged participation in breast cancer survivorship support group
+
+Comparative Analysis:
+Compared to baseline, the patient has experienced a slight decline in hemoglobin (likely treatment-related anemia) and a mild elevation in CA 15-3 tumor marker (possibly reflecting residual disease burden). Imaging studies show no evidence of distant metastases, and surgical pathology confirms a good response to neoadjuvant chemotherapy, with a small focus of residual invasive carcinoma and limited lymph node involvement. The patient's overall performance status remains good (ECOG 1), with no significant treatment-related toxicities or complications.
+
+Plan:
+- Continue regular surveillance with history, physical exam, and mammography
+- Repeat CA 15-3 testing at next follow-up visit
+- Assess for long-term treatment-related side effects (e.g., peripheral neuropathy, cardiotoxicity)
+- Provide ongoing psychosocial support and survivorship care planning
+- Consider enrollment in clinical trials for high-risk TNBC patients, if eligible
 ```
