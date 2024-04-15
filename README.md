@@ -1,149 +1,292 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). 
-
-Example as below:
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. Example: 
 ```
-Setting: Oncology Clinic, Sarah's Initial Consultation
-
-Scene: Sarah sits in the waiting room of the oncology clinic, feeling a mix of apprehension and determination. She has been referred to a cancer specialist by her primary care physician after expressing concerns about her persistent symptoms.
-
-Nurse: "Sarah Smith? The doctor will see you now."
-
-Sarah: Nods nervously and follows the nurse to the examination room.
-
-Doctor: "Good morning, Sarah. I'm Dr. Johnson, an oncologist specializing in lung cancer. How are you feeling today?"
-
-Sarah: "I've been better, doctor. I've had this persistent cough, trouble breathing, and I've been losing weight without trying. I'm really worried something might be wrong."
-
-Doctor: Listens attentively, jotting down notes "I'm sorry to hear that, Sarah. We'll do everything we can to figure out what's going on. Can you tell me more about your symptoms and any relevant medical history?"
-
-Sarah: Describes her symptoms in detail, including her smoking history and family medical history.
-
-Doctor: Completes the intake process and orders further diagnostic tests "Based on your symptoms and medical history, we'll need to conduct some tests to determine the cause of your symptoms. We'll start with a chest X-ray and possibly a CT scan to get a closer look. I understand this may be overwhelming, but we're here to support you every step of the way."
-
-Sarah: Nods, feeling reassured by the doctor's empathy and expertise "Thank you, doctor. I just want to know what's going on so we can address it."
-
-Doctor: "Absolutely, Sarah. We'll take it one step at a time. Our goal is to get to the bottom of your symptoms and develop a personalized treatment plan tailored to your needs. I'll be with you every step of the way."
+{
+  "setting": ... ,
+  "scene": ... ,
+  "description": ... ,
+  "dialogue": [
+    {
+      "speaker": "Patient",
+      "speech": ... ,
+      "action": ... ,
+    },
+    {
+      "speaker": "Doctor",
+      "speech": ... ,
+      "action": ..., 
+    },
+    ... 
+  ]
+}
 ```
-
-[CURRENT PROMPT END]
 
 ----
 
 ### prompt to generate a synthetic medical record for a cancer patient
 
-Create a synthetic medical record for a cancer patient, ensuring it mirrors an authentic medical record and uses standard medical terminology. This medical record should be detailed, exceeding 12,000 tokens. Start by creating the initial segment and then outline subsequent prompts (as per the instructions below) to facilitate ongoing data generation.
+Create synthetic medical record for a cancer patient. The medical record should be extensive, exceeding 12K tokens. Begin by crafting the initial segment and provide subsequent prompts to enable the continuation of data generation. 
 
-Begin with essential personal details such as the patient's name, date of birth, and contact information. Document the specific type of cancer diagnosed, its current staging, and provide a narrative of the patient's health status before the diagnosis. Include the treatment history, current management strategies, and comparisons with initial baseline data.
+The medical record should should cover following information: 
+1. Personal details: patient's name, date of birth, contact information;
+2. Cancer diagnosis: type of cancer, current staging, date of diagnosis;
+3. Treatment history: specific treatments (e.g., chemotherapy, radiation therapy, surgery), duration, side effects;
+4. Current management strategies: medications (dosage, frequency, route), other therapies;
+5. Baseline comparisons: changes in condition, medications, and symptoms relative to baseline;
+6. Pre-diagnosis health status: a narrative of the patient's health before the cancer diagnosis;
+7. Laboratory panel report: current findings and comparative analysis from baseline;
+8. Recent reports: findings from laboratory, imaging, and biopsy reports relevant to the cancer diagnosis;
+9. Social history: occupation, smoking status, alcohol use, and changes relative to baseline;
+10. Family medical history: summary of relevant family health issues;
+11. Recent symptoms: current symptoms and changes relative to baseline;
+12. Physical examination findings: vital signs and any abnormal findings;
+13. Treatment plan: comprehensive plan, noting any deviations from baseline;
+14. Socioeconomic status: report on the patient's socioeconomic situation;
+15. Community environment: description of the patient's living environment;
+16. Dietary habits: detailed report on the patient's diet, including any changes since diagnosis;
+17. Response to treatment: a brief summary of the patient's response to the current treatment plan;
+18. Quality of life: information on how the cancer has affected the patient's daily life and functioning;
+19. Mental health: any concerns or symptoms related to the patient's emotional well-being;
+20. Goals and preferences: the patient's treatment goals and end-of-life preferences, if applicable.
 
-Next, detail any other existing conditions, list current medications, and note any changes relative to the baseline. Proceed with a current laboratory panel report, include a comparative analysis from the baseline, and present findings from recent laboratory tests, imaging, and biopsy reports relevant to the diagnosed cancer type.
-
-Incorporate the patient's social history, including occupation, smoking status, alcohol use, and any changes from the baseline. Provide a summary of the family medical history, recent symptoms, and physical examination findings. Conclude with a comprehensive treatment plan, noting any deviations from the baseline.
-
-Finally, include a sample report of the patient's socioeconomic status, community environment, and detailed dietary habits that are relevant to their health.
-
-Example below: 
+Use JSON format as output. Example: 
 ```
-Patient Name: Emily Johnson
-Date of Birth: 09/22/1978
-Contact Information: 456 Elm Street, Somewhere, USA; Phone: (555) 987-6543
-
-Cancer Diagnosis: Stage II Triple-Negative Breast Cancer (TNBC)
-Date of Diagnosis: 06/10/2023
-
-Treatment History:
-- 07/01/2023: Initiated neoadjuvant chemotherapy with Doxorubicin, Cyclophosphamide, and Paclitaxel (AC-T regimen).
-- 10/15/2023: Completed neoadjuvant chemotherapy, with clinical partial response.
-- 11/05/2023: Underwent left total mastectomy with sentinel lymph node biopsy.
-- 12/01/2023: Initiated adjuvant radiation therapy to chest wall and regional lymph nodes.
-
-Current Management:
-- Completed adjuvant radiation therapy on 01/15/2024.
-- Scheduled for follow-up with medical oncology and surgical oncology on 03/01/2024.
-
-Baseline Comparison:
-- No prior history of breast cancer or other malignancies.
-
-Other Medical Conditions:
-- Asthma (diagnosed 1995)
-- Generalized Anxiety Disorder (diagnosed 2010)
-
-Current Medications:
-- Albuterol inhaler as needed for asthma symptoms (no change from baseline)
-- Sertraline 50 mg daily for anxiety (baseline: 25 mg daily)
-
-Social History:
-- Occupation: Elementary school teacher (no change from baseline)
-- Smoking Status: Never smoker (no change from baseline)
-- Alcohol Use: Rare, less than 1 drink per month (no change from baseline)
-
-Family Medical History:
-- Mother: Deceased (age 60), history of ovarian cancer
-- Father: Alive (age 75), history of hypertension and prostate cancer
-- Siblings: One sister (age 40), no significant medical history
-
-Recent Symptoms/Complaints:
-- Fatigue and weakness (improving since completion of treatment)
-- Surgical site pain (well-controlled with oral analgesics)
-
-Physical Examination:
-- Vital Signs: BP 118/72, HR 68, RR 14, Temp 98.2°F, SpO2 99% on room air
-- Lungs: Clear to auscultation bilaterally, no wheezes or rhonchi
-- Heart: Regular rate and rhythm, no murmurs, rubs, or gallops
-- Breasts: Left total mastectomy site clean and dry, no signs of infection or hematoma
-- Lymph Nodes: No palpable axillary, supraclavicular, or cervical lymphadenopathy
-
-Treatment Plan:
-- Continue regular follow-up with medical oncology and surgical oncology
-- Monitor for treatment-related late effects and manage accordingly
-- Consider genetic testing for hereditary breast and ovarian cancer syndromes
-- Encourage healthy lifestyle habits (e.g., regular exercise, balanced diet)
-
-Social Determinants of Health (SDOH) Report:
-- Socioeconomic Status: Middle-income, employed as an elementary school teacher
-- Community Environment: Lives in a suburban area with access to parks and recreation facilities
-- Access to Healthcare: Insured through employer-sponsored health plan, with access to comprehensive care
-- Dietary Habits: Balanced diet, high in fruits, vegetables, and whole grains; limited processed foods
-
-Cancer Narrative:
-The patient is a 45-year-old female with no significant past medical history who presented with a self-discovered left breast mass in June 2023. Diagnostic mammogram and ultrasound revealed a 3.2 cm irregular mass at the 2 o'clock position of the left breast, with suspicious axillary lymph nodes. Core needle biopsy confirmed the diagnosis of grade 3 invasive ductal carcinoma, triple-negative subtype (ER/PR/HER2-negative). Staging workup with chest/abdomen/pelvis CT and bone scan showed no evidence of distant metastases, consistent with stage IIB (cT2N1M0) disease.
-
-Laboratory Panel Report:
-- CBC: WBC 5.8 (baseline 6.2), Hgb 12.5 (baseline 13.2), Plt 260 (baseline 240)
-- CMP: All values within normal limits
-- CA 15-3: 28 U/mL (baseline 22 U/mL)
-
-Imaging and Biopsy Reports:
-- Diagnostic Mammogram (06/12/2023): 3.2 cm irregular mass at 2 o'clock position of left breast, with associated architectural distortion and skin thickening
-- Breast Ultrasound (06/12/2023): 3.2 cm irregular hypoechoic mass at 2 o'clock position of left breast, with posterior acoustic shadowing; two abnormal left axillary lymph nodes with cortical thickening
-- Core Needle Biopsy (06/15/2023): Grade 3 invasive ductal carcinoma, triple-negative (ER/PR <1%, HER2 0 by IHC), Ki-67 60%
-- Chest/Abdomen/Pelvis CT (06/20/2023): No evidence of distant metastases
-- Bone Scan (06/22/2023): No evidence of osseous metastatic disease
-
-Surgical Pathology Report (Left Total Mastectomy, 11/05/2023):
-- Invasive ductal carcinoma, grade 3, measuring 1.8 cm in greatest dimension
-- Margins: Negative (closest margin 0.5 cm at deep margin)
-- Lymph Nodes: 1/3 sentinel nodes positive for macrometastasis (2.2 mm), 0/10 non-sentinel nodes
-- Pathologic Stage: ypT1cN1aMx (AJCC 8th Edition)
-
-Genetic Testing:
-- Germline testing for BRCA1/2 and other high-risk breast cancer genes: Negative
-
-Psychosocial Assessment:
-- Patient reports increased stress and anxiety related to cancer diagnosis and treatment
-- Referred to oncology psychologist for cognitive-behavioral therapy and stress management techniques
-- Encouraged participation in breast cancer survivorship support group
-
-Comparative Analysis:
-Compared to baseline, the patient has experienced a slight decline in hemoglobin (likely treatment-related anemia) and a mild elevation in CA 15-3 tumor marker (possibly reflecting residual disease burden). Imaging studies show no evidence of distant metastases, and surgical pathology confirms a good response to neoadjuvant chemotherapy, with a small focus of residual invasive carcinoma and limited lymph node involvement. The patient's overall performance status remains good (ECOG 1), with no significant treatment-related toxicities or complications.
-
-Plan:
-- Continue regular surveillance with history, physical exam, and mammography
-- Repeat CA 15-3 testing at next follow-up visit
-- Assess for long-term treatment-related side effects (e.g., peripheral neuropathy, cardiotoxicity)
-- Provide ongoing psychosocial support and survivorship care planning
-- Consider enrollment in clinical trials for high-risk TNBC patients, if eligible
+{
+  "patient": {
+    "name": ... ,
+    "dateOfBirth": ... ,
+    "contactInfo": {
+      "address": ... ,
+      "phone": ... , 
+    }
+  },
+  "cancer": {
+    "type": ... ,
+    "diagnosisDate": ... ,
+    "treatment": {
+      "history": [
+        {
+          "date": "10/01/2022",
+          "description": "Initiated concurrent chemoradiation therapy with Cisplatin and Etoposide, along with daily radiation therapy (RT) to a total dose of 60 Gy in 30 fractions."
+        },
+        ... 
+      ],
+      "currentPlan": [
+        "Continuing maintenance therapy with Durvalumab every 2 weeks.",
+        ... 
+      ]
+    },
+    "baseline": "Prior to diagnosis, patient had no significant respiratory symptoms or abnormal imaging findings."
+  },
+  "medicalHistory": {
+    "conditions": [
+      {
+        "name": "Hypertension",
+        "diagnosisDate": "2010"
+      },
+      ... 
+    ],
+    "medications": [
+      {
+        "name": "Lisinopril",
+        "dosage": "20 mg daily",
+        "baseline": "10 mg daily"
+      },
+      ... 
+    ]
+  },
+  "socialHistory": {
+    "occupation": "Retired factory worker",
+    "smokingStatus": {
+      "current": "Former smoker, quit in 2020 after 30 pack-year history",
+      "baseline": "Active smoker"
+    },
+    "alcoholUse": "Occasional, 1-2 drinks per week"
+  },
+  "familyHistory": [
+    {
+      "relation": "Father",
+      "status": "Deceased (age 72)", 
+      "conditions": [
+        "Lung cancer"
+      ]
+    },
+    ... 
+  ],
+  "symptoms": [
+    {
+      "name": "Fatigue",
+      "status": "New onset"
+    },
+    ... 
+  ],
+  "physicalExam": {
+    "vitalSigns": {
+      "bloodPressure": "128/78",
+      "heartRate": 72,
+      "respiratoryRate": 16,
+      "temperature": "98.6°F",
+      "oxygenSaturation": "96% on room air"
+    },
+    ... 
+  },
+  "socialDeterminantsOfHealth": {
+    "socioeconomicStatus": "Low-income, retired factory worker with limited savings",
+    "communityEnvironment": "Lives in an urban area with high air pollution levels",
+    "healthcareAccess": "Enrolled in Medicare, but has limited access to specialty care due to transportation issues", 
+    "dietaryHabits": "High consumption of processed and red meats, low intake of fruits and vegetables"
+  },
+  "diagnosticTests": {
+    "imaging": [
+      {
+        "type": "Chest CT",
+        "date": "09/10/2022",
+        "findings": "4.5 cm mass in the right upper lobe, enlarged mediastinal lymph nodes"
+      },
+      ... 
+    ],
+    "biopsies": [
+      {
+        "type": "Primary tumor biopsy",
+        "date": "09/25/2022",
+        "findings": "Non-small cell lung cancer (adenocarcinoma), EGFR and ALK negative, PD-L1 expression 30%"
+      }
+    ],
+    "pulmonaryFunctionTests": [
+      {
+        "type": "Baseline",
+        "date": "08/15/2022",
+        "results": {
+          "fev1": {
+            "value": 2.4,
+            "units": "L",
+            "predicted": "80%"
+          },
+          ... 
+        }
+      },
+    ],
+    "laboratoryTests": {
+      "cbc": {
+        "wbc": {
+          "current": 6.2,
+          "baseline": 7.5
+        },
+        ... 
+      },
+      ... 
+    },
+    "geneticTesting": {
+      "type": "Guardant360 liquid biopsy",
+      "date": "09/30/2022",
+      "findings": "No actionable mutations detected"
+    }
+  },
+  "treatmentSummary": {
+    "radiationTherapy": {
+      "startDate": "10/01/2022",
+      "endDate": "11/15/2022",
+      "technique": "Intensity-modulated radiation therapy (IMRT)",
+      "totalDose": {
+        "value": 60,
+        "units": "Gy",
+        "fractions": 30
+      },
+      "treatmentVolume": "Primary tumor and involved mediastinal lymph nodes",
+      "toxicities": [
+        {
+          "type": "Esophagitis",
+          "grade": 2
+        },
+        ... 
+      ]
+    },
+    "chemotherapy": {
+      "regimen": {
+        "drugs": [
+          {
+            "name": "Cisplatin",
+            "dose": "75 mg/m2"
+          },
+          ... 
+        ],
+        "schedule": "Both administered on days 1-3 of each 21-day cycle"
+      },
+      "cycles": {
+        "total": 4,
+        "dates": "10/01/2022 to 12/15/2022"
+      },
+      "toxicities": [
+        {
+          "type": "Neutropenia",
+          "grade": 3,
+          "management": "G-CSF support"
+        },
+        ...
+      ]
+    },
+    "immunotherapy": {
+      "drug": "Durvalumab",
+      "dose": "10 mg/kg",
+      "schedule": "Every 2 weeks",
+      "startDate": "02/01/2023",
+      "plannedDuration": "Until disease progression or unacceptable toxicity",
+      "toxicities": [
+        {
+          "type": "Fatigue",
+          "grade": 1
+        },
+        ... 
+      ]
+    }
+  },
+  "supportiveCare": {
+    "psychosocial": [
+      "Patient reports increased anxiety and depression since cancer diagnosis",
+      ... 
+    ],
+    "palliative": [
+      {
+        "symptoms": [
+          {
+            "name": "Chest pain",
+            "severity": {
+              "value": 3,
+              "scale": "0-10"
+            },
+            "management": "As-needed acetaminophen"
+          }
+        ]
+      },
+      "Referred to palliative care team for symptom management and advance care planning",
+      "Discussed goals of care and completed advance directive"
+    ],
+    "nutritional": {
+      "assessments": [
+        {
+          "type": "BMI",
+          "value": {
+            "baseline": {
+              "value": 27.2,
+              "category": "Overweight"
+            },
+            ... 
+          }
+        }
+      ],
+      "interventions": [
+        "Referred to registered dietitian for nutritional counseling and management of cancer cachexia",
+        "Recommended high-protein, calorie-dense diet and oral nutritional supplements"
+      ]
+    }
+  },
+  "assessment": {
+    "comparativeAnalysis": "Compared to baseline, the patient has experienced a decline in pulmonary function, as evidenced by decreased FEV1 and DLCO on PFTs. The patient's weight has also decreased, likely due to cancer cachexia and treatment-related side effects. Laboratory values show a slight improvement in diabetes control (HbA1c) and lipid profile, possibly due to lifestyle modifications and medication adjustments. The patient's overall performance status has declined from ECOG 1 at baseline to ECOG 2 currently, reflecting the impact of both the cancer and its treatment on daily functioning."
+  },
+  "plan": [
+    "Continue close monitoring of treatment response and toxicities",
+    ... 
+  ]
+}
 ```
-
-[CURRENT PROMPT END]
