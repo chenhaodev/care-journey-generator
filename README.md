@@ -1,8 +1,6 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). The dialogue should be extensive, exceeding 8K tokens. Begin by crafting the initial segment of the conversation and provide subsequent prompts to enable the continuation of data generation.
-
-Use JSON format as output. Example: 
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. Example: 
 ```
 {
   "setting": ... ,
