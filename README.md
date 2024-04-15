@@ -1,6 +1,8 @@
 ### prompt to geneate dialogue during intake
 
-[INST] Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake)[/INST]
+[INST] 
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake)
+[/INST]
 
 [EXAMPLE]
 ```
@@ -32,9 +34,17 @@ Doctor: "Absolutely, Sarah. We'll take it one step at a time. Our goal is to get
 
 ### prompt to generate a synthetic medical record for a cancer patient
 
-[INST] Create a synthetic medical record for a cancer patient, exceeding 12,000 tokens. Start by creating the initial segment and then outline subsequent prompts (as per the instructions below) to facilitate ongoing data generation. 
+[INST] 
+Create a synthetic medical record for a cancer patient, ensuring it mirrors an authentic medical record and uses standard medical terminology. This medical record should be detailed, exceeding 12,000 tokens. Start by creating the initial segment and then outline subsequent prompts (as per the instructions below) to facilitate ongoing data generation.
 
-Begin with essential personal details such as the patient's name, date of birth, and contact information. Document the specific type of cancer diagnosed, its current staging, and provide a narrative of the patient's health status before the diagnosis. Include the treatment history, current management strategies, and comparisons with initial baseline data. Next, detail any other existing conditions, list current medications, and note any changes relative to the baseline. Proceed with a current laboratory panel report, include a comparative analysis from the baseline, and present findings from recent laboratory tests, imaging, and biopsy reports relevant to the diagnosed cancer type. Incorporate the patient's social history, including occupation, smoking status, alcohol use, and any changes from the baseline. Provide a summary of the family medical history, recent symptoms, and physical examination findings. Conclude with a comprehensive treatment plan, noting any deviations from the baseline. Finally, include a sample report of the patient's socioeconomic status, community environment, and detailed dietary habits that are relevant to their health.[/INST]
+Begin with essential personal details such as the patient's name, date of birth, and contact information. Document the specific type of cancer diagnosed, its current staging, and provide a narrative of the patient's health status before the diagnosis. Include the treatment history, current management strategies, and comparisons with initial baseline data.
+
+Next, detail any other existing conditions, list current medications, and note any changes relative to the baseline. Proceed with a current laboratory panel report, include a comparative analysis from the baseline, and present findings from recent laboratory tests, imaging, and biopsy reports relevant to the diagnosed cancer type.
+
+Incorporate the patient's social history, including occupation, smoking status, alcohol use, and any changes from the baseline. Provide a summary of the family medical history, recent symptoms, and physical examination findings. Conclude with a comprehensive treatment plan, noting any deviations from the baseline.
+
+Finally, include a sample report of the patient's socioeconomic status, community environment, and detailed dietary habits that are relevant to their health.
+[/INST]
 
 [EXAMPLE]
 ```
