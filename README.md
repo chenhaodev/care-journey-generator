@@ -2,19 +2,21 @@
 
 Create a long dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use following example as output format: 
 
-```JSON
+```
 {
-  "setting": ...,
-  "scene": ...,
-  "description": ...,
+  "setting": ... ,
+  "scene": ... ,
+  "description": ... ,
   "dialogue": [
     {
       "speaker": "Patient",
-      "speech": ... 
+      "speech": ... ,
+      "action": ... ,
     },
     {
       "speaker": "Doctor",
-      "speech": ...
+      "speech": ... ,
+      "action": ..., 
     },
     ... 
   ]
@@ -32,10 +34,10 @@ Example format below:
 {
   "patient": {
     "name": ... ,
-    "dateOfBirth": ...,
+    "dateOfBirth": ... ,
     "contactInfo": {
       "address": ... ,
-      "phone": ... 
+      "phone": ... , 
     }
   },
   "cancer": {
