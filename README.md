@@ -1,7 +1,8 @@
 ### prompt to geneate dialogue during intake
 
-Create a long dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use following example as output format: 
+Create a long dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). 
 
+Use following example as output format: 
 ```
 {
   "setting": ... ,
@@ -29,7 +30,7 @@ Create a long dialogue in a medical setting where a patient is attending the ini
 
 Create a synthetic medical record for a cancer patient in JSON format. Include the following information: 1. Personal details: patient's name, date of birth, contact information; 2. Cancer diagnosis: type of cancer, current staging, date of diagnosis; 3. Treatment history: specific treatments (e.g., chemotherapy, radiation therapy, surgery), duration, side effects; 4. Current management strategies: medications (dosage, frequency, route), other therapies; 5. Baseline comparisons: changes in condition, medications, and symptoms relative to baseline; 6. Pre-diagnosis health status: a narrative of the patient's health before the cancer diagnosis; 7. Laboratory panel report: current findings and comparative analysis from baseline; 8. Recent reports: findings from laboratory, imaging, and biopsy reports relevant to the cancer diagnosis; 9. Social history: occupation, smoking status, alcohol use, and changes relative to baseline; 10. Family medical history: summary of relevant family health issues; 11. Recent symptoms: current symptoms and changes relative to baseline; 12. Physical examination findings: vital signs and any abnormal findings; 13. Treatment plan: comprehensive plan, noting any deviations from baseline; 14. Socioeconomic status: report on the patient's socioeconomic situation; 15. Community environment: description of the patient's living environment; 16. Dietary habits: detailed report on the patient's diet, including any changes since diagnosis; 17. Response to treatment: a brief summary of the patient's response to the current treatment plan; 18. Quality of life: information on how the cancer has affected the patient's daily life and functioning; 19. Mental health: any concerns or symptoms related to the patient's emotional well-being; 20. Goals and preferences: the patient's treatment goals and end-of-life preferences, if applicable.
 
-Example format below: 
+Use following example as output format: 
 ```
 {
   "patient": {
