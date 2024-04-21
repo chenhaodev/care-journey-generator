@@ -1,28 +1,6 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. 
-
-JSON Format
-```
-{
-  "setting": ... ,
-  "scene": ... ,
-  "description": ... ,
-  "dialogue": [
-    {
-      "speaker": "Patient",
-      "speech": ... ,
-      "action": ... ,
-    },
-    {
-      "speaker": "Doctor",
-      "speech": ... ,
-      "action": ..., 
-    },
-    ... 
-  ]
-}
-```
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Check Examples below, and use JSON format as output. 
 
 Example: 
 ```
