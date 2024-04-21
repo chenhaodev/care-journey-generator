@@ -56,26 +56,24 @@ Example:
 Create synthetic medical record for a cancer patient. The medical record should be extensive, exceeding 12K tokens. Begin by crafting the initial segment and provide subsequent prompts to enable the continuation of data generation. 
 
 The medical record should should cover following information: 
-1. Personal details: patient's name, date of birth, contact information;
-2. Cancer diagnosis: type of cancer, current staging, date of diagnosis;
-3. Treatment history: specific treatments (e.g., chemotherapy, radiation therapy, surgery), duration, side effects;
-4. Current management strategies: medications (dosage, frequency, route), other therapies;
-5. Baseline comparisons: changes in condition, medications, and symptoms relative to baseline;
-6. Pre-diagnosis health status: a narrative of the patient's health before the cancer diagnosis;
-7. Laboratory panel report: current findings and comparative analysis from baseline;
-8. Recent reports: findings from laboratory, imaging, and biopsy reports relevant to the cancer diagnosis;
-9. Social history: occupation, smoking status, alcohol use, and changes relative to baseline;
-10. Family medical history: summary of relevant family health issues;
-11. Recent symptoms: current symptoms and changes relative to baseline;
-12. Physical examination findings: vital signs and any abnormal findings;
-13. Treatment plan: comprehensive plan, noting any deviations from baseline;
-14. Socioeconomic status: report on the patient's socioeconomic situation;
-15. Community environment: description of the patient's living environment;
-16. Dietary habits: detailed report on the patient's diet, including any changes since diagnosis;
-17. Response to treatment: a brief summary of the patient's response to the current treatment plan;
-18. Quality of life: information on how the cancer has affected the patient's daily life and functioning;
-19. Mental health: any concerns or symptoms related to the patient's emotional well-being;
-20. Goals and preferences: the patient's treatment goals and end-of-life preferences, if applicable.
+1. Personal Details: Patient's name, date of birth, contact information.
+2. Cancer Diagnosis: Type of cancer, current staging, date of diagnosis.
+3. Treatment History: Specific treatments (e.g., chemotherapy, radiation therapy, surgery), duration, side effects, with dates for a clear timeline.
+4. Current Treatment Plan: Comprehensive plan including medications (dosage, frequency, route), other therapies, and any deviations from the baseline.
+5. Baseline Health Status: A narrative of the patient's health before the cancer diagnosis.
+6. Diagnostic Tests: Findings from laboratory, imaging, and biopsy reports relevant to the cancer diagnosis, along with comparative analysis from baseline.
+7. Comorbidities: List any other medical conditions the patient has that can impact cancer treatment and prognosis.
+8. Social History: Occupation, smoking status, alcohol use, and changes relative to baseline.
+9. Family Medical History: Summary of relevant family health issues.
+10. Recent Symptoms: Current symptoms and changes relative to baseline.
+11. Physical Examination Findings: Vital signs and any abnormal findings.
+12. Socioeconomic status: report on the patient's socioeconomic situation;
+13. Community environment: description of the patient's living environment;
+14. Dietary habits: detailed report on the patient's diet, including any changes since diagnosis;
+15. Response to treatment: a brief summary of the patient's response to the current treatment plan;
+16. Quality of life: information on how the cancer has affected the patient's daily life and functioning;
+17. Mental health: any concerns or symptoms related to the patient's emotional well-being;
+18. Goals and preferences: the patient's treatment goals and end-of-life preferences, if applicable.
 
 Use JSON format as output. Example: 
 ```
