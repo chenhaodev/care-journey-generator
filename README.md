@@ -42,7 +42,7 @@ Use JSON format as output. Example:
 
 ### prompt to generate a summary of complex patient call script
 
-Create a detailed medical consultation summary. The summary should include sections such as Reason for Call, Discussion Summary, Current Symptoms, Review of Systems (ROS), Social Support, Psychosocial Support, Emotional Support, Social Determinants of Health (SDOH), Functional Assessment, Medication Review, Education Provided, and Follow-up Actions. 
+Create a detailed medical consultation summary from a cancer patient consultation call script. The summary should include sections such as Reason for Call, Discussion Summary, Current Symptoms, Review of Systems (ROS), Social Support, Psychosocial Support, Emotional Support, Social Determinants of Health (SDOH), Functional Assessment, Medication Review, Education Provided, and Follow-up Actions. 
 
 Use JSON format as output. Example: 
 ```
