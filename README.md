@@ -112,239 +112,266 @@ Use JSON format as output. Example:
 ```
 {
   "patient": {
-    "name": ... ,
-    "dateOfBirth": ... ,
+    "name": ...,
+    "dateOfBirth": ...,
+    "gender": ...,
     "contactInfo": {
-      "address": ... ,
-      "phone": ... , 
+      "address": ...,
+      "phone": ...
+    },
+    "emergencyContact": {
+      "name": ...,
+      "relationship": ...,
+      "phone": ...
     }
   },
   "cancer": {
-    "type": ... ,
-    "diagnosisDate": ... ,
+    "type": ...,
+    "diagnosisDate": ...,
     "treatment": {
       "history": [
         {
-          "date": "10/01/2022",
-          "description": "Initiated concurrent chemoradiation therapy with Cisplatin and Etoposide, along with daily radiation therapy (RT) to a total dose of 60 Gy in 30 fractions."
+          "date": ...,
+          "description": ...
         },
-        ... 
+        ...
       ],
-      "currentPlan": [
-        "Continuing maintenance therapy with Durvalumab every 2 weeks.",
-        ... 
-      ]
+      "currentPlan": [...]
     },
-    "baseline": "Prior to diagnosis, patient had no significant respiratory symptoms or abnormal imaging findings."
+    "baseline": ...
   },
   "medicalHistory": {
     "conditions": [
       {
-        "name": "Hypertension",
-        "diagnosisDate": "2010"
+        "name": ...,
+        "diagnosisDate": ...,
+        "diagnosed": ...,
+        "managedWith": ...
       },
-      ... 
+      ...
     ],
     "medications": [
       {
-        "name": "Lisinopril",
-        "dosage": "20 mg daily",
-        "baseline": "10 mg daily"
+        "name": ...,
+        "dosage": ...,
+        "baseline": ...,
+        "indication": ...
       },
-      ... 
+      ...
     ]
   },
   "socialHistory": {
-    "occupation": "Retired factory worker",
+    "occupation": ...,
     "smokingStatus": {
-      "current": "Former smoker, quit in 2020 after 30 pack-year history",
-      "baseline": "Active smoker"
+      "current": ...,
+      "baseline": ...
     },
-    "alcoholUse": "Occasional, 1-2 drinks per week"
+    "alcoholUse": ...
   },
   "familyHistory": [
     {
-      "relation": "Father",
-      "status": "Deceased (age 72)", 
-      "conditions": [
-        "Lung cancer"
-      ]
+      "relation": ...,
+      "status": ...,
+      "conditions": [...]
     },
-    ... 
+    ...
   ],
+  "chiefComplaint": ...,
+  "historyOfPresentIllness": ...,
   "symptoms": [
     {
-      "name": "Fatigue",
-      "status": "New onset"
+      "name": ...,
+      "status": ...
     },
-    ... 
+    ...
   ],
   "physicalExam": {
     "vitalSigns": {
-      "bloodPressure": "128/78",
-      "heartRate": 72,
-      "respiratoryRate": 16,
-      "temperature": "98.6°F",
-      "oxygenSaturation": "96% on room air"
+      "bloodPressure": ...,
+      "heartRate": ...,
+      "respiratoryRate": ...,
+      "temperature": ...,
+      "oxygenSaturation": ...
     },
-    ... 
+    "general": ...,
+    "heent": ...,
+    "respiratory": ...,
+    "cardiovascular": ...,
+    "abdomen": ...,
+    "extremities": ...
   },
   "socialDeterminantsOfHealth": {
-    "socioeconomicStatus": "Low-income, retired factory worker with limited savings",
-    "communityEnvironment": "Lives in an urban area with high air pollution levels",
-    "healthcareAccess": "Enrolled in Medicare, but has limited access to specialty care due to transportation issues", 
-    "dietaryHabits": "High consumption of processed and red meats, low intake of fruits and vegetables"
+    "socioeconomicStatus": ...,
+    "communityEnvironment": ...,
+    "healthcareAccess": ...,
+    "dietaryHabits": ...
   },
   "diagnosticTests": {
     "imaging": [
       {
-        "type": "Chest CT",
-        "date": "09/10/2022",
-        "findings": "4.5 cm mass in the right upper lobe, enlarged mediastinal lymph nodes"
+        "type": ...,
+        "date": ...,
+        "findings": ...
       },
-      ... 
+      ...
     ],
     "biopsies": [
       {
-        "type": "Primary tumor biopsy",
-        "date": "09/25/2022",
-        "findings": "Non-small cell lung cancer (adenocarcinoma), EGFR and ALK negative, PD-L1 expression 30%"
+        "type": ...,
+        "date": ...,
+        "findings": ...,
+        "immunohistochemicalStaining": ...
       }
     ],
     "pulmonaryFunctionTests": [
       {
-        "type": "Baseline",
-        "date": "08/15/2022",
+        "type": ...,
+        "date": ...,
         "results": {
           "fev1": {
-            "value": 2.4,
-            "units": "L",
-            "predicted": "80%"
+            "value": ...,
+            "units": ...,
+            "predicted": ...
           },
-          ... 
+          ...
         }
       },
     ],
     "laboratoryTests": {
       "cbc": {
         "wbc": {
-          "current": 6.2,
-          "baseline": 7.5
+          "current": ...,
+          "baseline": ...
         },
-        ... 
+        ...
       },
-      ... 
+      "comprehensiveMetabolicPanel": {
+        "glucose": ...,
+        "bloodUreaNitrogen": ...,
+        ...
+      },
+      "lipidProfile": {
+        "totalCholesterol": ...,
+        "ldlCholesterol": ...,
+        ...
+      },
+      "thyroidFunctionTests": {
+        "thyroidStimulatingHormone": ...,
+        "freeThyroxine": ...,
+        ...
+      },
+      "hemoglobinA1c": ...
     },
     "geneticTesting": {
-      "type": "Guardant360 liquid biopsy",
-      "date": "09/30/2022",
-      "findings": "No actionable mutations detected"
+      "type": ...,
+      "date": ...,
+      "findings": ...
+    }
+  },
+  "imagingStudies": {
+    "chestXRay": {
+      "findings": ...,
+      "impression": ...
+    },
+    "ctScan": {
+      "findings": ...,
+      "impression": ...
     }
   },
   "treatmentSummary": {
     "radiationTherapy": {
-      "startDate": "10/01/2022",
-      "endDate": "11/15/2022",
-      "technique": "Intensity-modulated radiation therapy (IMRT)",
+      "startDate": ...,
+      "endDate": ...,
+      "technique": ...,
       "totalDose": {
-        "value": 60,
-        "units": "Gy",
-        "fractions": 30
+        "value": ...,
+        "units": ...,
+        "fractions": ...
       },
-      "treatmentVolume": "Primary tumor and involved mediastinal lymph nodes",
+      "treatmentVolume": ...,
       "toxicities": [
         {
-          "type": "Esophagitis",
-          "grade": 2
+          "type": ...,
+          "grade": ...
         },
-        ... 
+        ...
       ]
     },
     "chemotherapy": {
       "regimen": {
         "drugs": [
           {
-            "name": "Cisplatin",
-            "dose": "75 mg/m2"
+            "name": ...,
+            "dose": ...
           },
-          ... 
+          ...
         ],
-        "schedule": "Both administered on days 1-3 of each 21-day cycle"
+        "schedule": ...
       },
       "cycles": {
-        "total": 4,
-        "dates": "10/01/2022 to 12/15/2022"
+        "total": ...,
+        "dates": ...
       },
       "toxicities": [
         {
-          "type": "Neutropenia",
-          "grade": 3,
-          "management": "G-CSF support"
+          "type": ...,
+          "grade": ...,
+          "management": ...
         },
         ...
       ]
     },
     "immunotherapy": {
-      "drug": "Durvalumab",
-      "dose": "10 mg/kg",
-      "schedule": "Every 2 weeks",
-      "startDate": "02/01/2023",
-      "plannedDuration": "Until disease progression or unacceptable toxicity",
+      "drug": ...,
+      "dose": ...,
+      "schedule": ...,
+      "startDate": ...,
+      "plannedDuration": ...,
       "toxicities": [
         {
-          "type": "Fatigue",
-          "grade": 1
+          "type": ...,
+          "grade": ...
         },
-        ... 
+        ...
       ]
     }
   },
   "supportiveCare": {
-    "psychosocial": [
-      "Patient reports increased anxiety and depression since cancer diagnosis",
-      ... 
-    ],
+    "psychosocial": [...],
     "palliative": [
       {
         "symptoms": [
           {
-            "name": "Chest pain",
+            "name": ...,
             "severity": {
-              "value": 3,
-              "scale": "0-10"
+              "value": ...,
+              "scale": ...
             },
-            "management": "As-needed acetaminophen"
+            "management": ...
           }
         ]
       },
-      "Referred to palliative care team for symptom management and advance care planning",
-      "Discussed goals of care and completed advance directive"
+      ...
     ],
     "nutritional": {
       "assessments": [
         {
-          "type": "BMI",
+          "type": ...,
           "value": {
             "baseline": {
-              "value": 27.2,
-              "category": "Overweight"
+              "value": ...,
+              "category": ...
             },
-            ... 
+            ...
           }
         }
       ],
-      "interventions": [
-        "Referred to registered dietitian for nutritional counseling and management of cancer cachexia",
-        "Recommended high-protein, calorie-dense diet and oral nutritional supplements"
-      ]
+      "interventions": [...]
     }
   },
   "assessment": {
-    "comparativeAnalysis": "Compared to baseline, the patient has experienced a decline in pulmonary function, as evidenced by decreased FEV1 and DLCO on PFTs. The patient's weight has also decreased, likely due to cancer cachexia and treatment-related side effects. Laboratory values show a slight improvement in diabetes control (HbA1c) and lipid profile, possibly due to lifestyle modifications and medication adjustments. The patient's overall performance status has declined from ECOG 1 at baseline to ECOG 2 currently, reflecting the impact of both the cancer and its treatment on daily functioning."
+    "comparativeAnalysis": ...
   },
-  "plan": [
-    "Continue close monitoring of treatment response and toxicities",
-    ... 
-  ]
+  "plan": [...]
 }
 ```
