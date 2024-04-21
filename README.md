@@ -1,8 +1,6 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Check Examples below, and use JSON format as output. 
-
-Example: 
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. Example: 
 ```
 {
   "setting": "Oncology Clinic",
@@ -37,6 +35,38 @@ Example:
     ... 
   ]
 } 
+```
+----
+
+### prompt to generate a summary of complex patient call script
+
+Create a detailed medical consultation summary. The template should include sections such as 'Reason for Call', 'Discussion Summary', 'Current Symptoms', 'Review of Systems (ROS)', 'Social Support', 'Psychosocial Support', 'Emotional Support', 'Social Determinants of Health (SDOH)', 'Functional Assessment', 'Medication Review', 'Education Provided', and 'Follow-up Actions'. Use JSON format as output. Example: 
+```
+{
+  "Reason for Call": ..., #Brief description of the purpose of the call,
+  "Discussion Summary": ..., #Overview of the topics discussed during the call, including medical history, current symptoms, and other relevant systems,
+  "Current Symptoms": ..., #List of the patient's current symptoms,
+  "Review of Systems (ROS)": {
+    "General": ..., #Symptoms related to the patient's overall health,
+    "Cardiovascular": ..., #Symptoms related to the heart and blood vessels
+    "Respiratory": ..., #Symptoms related to the lungs and breathing
+    "Gastrointestinal": ..., #Symptoms related to the digestive system
+    "Genitourinary": ..., #Symptoms related to the urinary and reproductive systems
+    "Neurological": ..., #Symptoms related to the nervous system
+  },
+  "Social Support": ..., #Description of the patient's support system, including family and friends
+  "Psychosocial Support": ..., #Description of the patient's emotional and psychological well-being, including any challenges or struggles
+  "Emotional Support": ..., #Description of the patient's emotional state and any related stress or anxiety
+  "Social Determinants of Health (SDOH)": {
+    "Transportation Needs": ..., #Description of the patient's transportation challenges
+    "Housing Living Situation": ..., #Description of the patient's housing situation and any related issues
+    "Food Insecurity": ..., #Description of the patient's difficulties accessing or affording nutritious food
+  },
+  "Functional Assessment": ..., #Description of the patient's ability to perform daily tasks and any limitations or difficulties
+  "Medication Review": ..., #List of the patient's current medications, including dosages and any issues or concerns
+  "Education Provided": ..., #Description of the education and information provided to the patient during the call
+  "Follow-up Actions": ..., #Description of the next steps and actions to be taken to support the patient's care and well-being
+}
 ```
 
 ----
