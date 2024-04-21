@@ -34,16 +34,6 @@ Example:
       "speech": "I'm sorry to hear that, Sarah. We'll do everything we can to figure out what's going on. Can you tell me more about your symptoms and any relevant medical history?",
       "action": "Listens attentively, jotting down notes"
     },
-    {
-      "speaker": "Sarah",
-      "speech": "Describes her symptoms in detail, including her smoking history and family medical history.",
-      "action": ""
-    },
-    {
-      "speaker": "Doctor",
-      "speech": "Based on your symptoms and medical history, we'll need to conduct some tests to determine the cause of your symptoms. We'll start with a chest X-ray and possibly a CT scan to get a closer look. I understand this may be overwhelming, but we're here to support you every step of the way.",
-      "action": "Completes the intake process and orders further diagnostic tests"
-    },
     ... 
   ]
 } 
