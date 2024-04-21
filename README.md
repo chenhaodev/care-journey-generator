@@ -1,6 +1,8 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. Example: 
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). 
+
+Use JSON format as output. Example: 
 ```
 {
   "setting": "Oncology Clinic",
@@ -40,7 +42,9 @@ Create a dialogue in a medical setting where a patient is attending the initial 
 
 ### prompt to generate a summary of complex patient call script
 
-Create a detailed medical consultation summary. The summary should include sections such as Reason for Call, Discussion Summary, Current Symptoms, Review of Systems (ROS), Social Support, Psychosocial Support, Emotional Support, Social Determinants of Health (SDOH), Functional Assessment, Medication Review, Education Provided, and 'Follow-up Actions'. Use JSON format as output. Example: 
+Create a detailed medical consultation summary. The summary should include sections such as Reason for Call, Discussion Summary, Current Symptoms, Review of Systems (ROS), Social Support, Psychosocial Support, Emotional Support, Social Determinants of Health (SDOH), Functional Assessment, Medication Review, Education Provided, and Follow-up Actions. 
+
+Use JSON format as output. Example: 
 ```
 {
   "Reason for Call": ..., 
