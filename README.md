@@ -2,7 +2,11 @@
 
 This repository offers a collection of prompt-seeds crafted by the care team, designed for generating diverse synthetic data types for cancer patients. These include dialogues, consultation summaries, medical records, and more. [Try it here!](https://hf.co/chat/assistant/661a00229a7fbfa050158797)
 
+![](img/generator-v1.jpg)
+
 Below, you'll find examples of typical prompt-seeds.
+
+----
 
 ### Prompt to geneate dialogue during intake
 
@@ -44,6 +48,7 @@ Use JSON format as output. Example:
   ]
 } 
 ```
+
 ----
 
 ### Prompt to generate a summary of complex patient call script
