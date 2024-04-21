@@ -1,4 +1,10 @@
-### prompt to geneate dialogue during intake
+# Introduction
+
+This repository offers a collection of prompt-seeds crafted by the care team, designed for generating diverse synthetic data types for cancer patients. These include dialogues, consultation summaries, medical records, and more. [Try it here!](https://hf.co/chat/assistant/661a00229a7fbfa050158797)
+
+Below, you'll find examples of typical prompt-seeds.
+
+### Prompt to geneate dialogue during intake
 
 Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). 
 
@@ -40,7 +46,7 @@ Use JSON format as output. Example:
 ```
 ----
 
-### prompt to generate a summary of complex patient call script
+### Prompt to generate a summary of complex patient call script
 
 Create a detailed medical consultation summary from a cancer patient consultation call script. The summary should include sections such as Reason for Call, Discussion Summary, Current Symptoms, Review of Systems (ROS), Social Support, Psychosocial Support, Emotional Support, Social Determinants of Health (SDOH), Functional Assessment, Medication Review, Education Provided, and Follow-up Actions. 
 
@@ -75,7 +81,7 @@ Use JSON format as output. Example:
 
 ----
 
-### prompt to generate a synthetic medical record for a cancer patient
+### Prompt to generate a synthetic medical record for a cancer patient
 
 Create synthetic medical record for a cancer patient. The medical record should be extensive, exceeding 12K tokens. Begin by crafting the initial segment and provide subsequent prompts to enable the continuation of data generation. 
 
