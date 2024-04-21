@@ -1,6 +1,8 @@
 ### prompt to geneate dialogue during intake
 
-Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. Example: 
+Create a dialogue in a medical setting where a patient is attending the initial consultation in an oncology clinic (and nurse systematically inquire about cancer patient symptoms or issues during intake). Use JSON format as output. 
+
+JSON Format
 ```
 {
   "setting": ... ,
@@ -20,6 +22,62 @@ Create a dialogue in a medical setting where a patient is attending the initial 
     ... 
   ]
 }
+```
+
+Example: 
+```
+{
+  "setting": "Oncology Clinic",
+  "scene": "Sarah's Initial Consultation",
+  "description": "Sarah sits in the waiting room of the oncology clinic, feeling a mix of apprehension and determination.",
+  "dialogue": [
+    {
+      "speaker": "Nurse",
+      "speech": "Sarah Smith? The doctor will see you now.",
+      "action": ""
+    },
+    {
+      "speaker": "Sarah",
+      "speech": "",
+      "action": "Nods nervously and follows the nurse to the examination room."
+    },
+    {
+      "speaker": "Doctor",
+      "speech": "Good morning, Sarah. I'm Dr. Johnson, an oncologist specializing in lung cancer. How are you feeling today?",
+      "action": ""
+    },
+    {
+      "speaker": "Sarah",
+      "speech": "I've been better, doctor. I've had this persistent cough, trouble breathing, and I've been losing weight without trying. I'm really worried something might be wrong.",
+      "action": ""
+    },
+    {
+      "speaker": "Doctor",
+      "speech": "I'm sorry to hear that, Sarah. We'll do everything we can to figure out what's going on. Can you tell me more about your symptoms and any relevant medical history?",
+      "action": "Listens attentively, jotting down notes"
+    },
+    {
+      "speaker": "Sarah",
+      "speech": "Describes her symptoms in detail, including her smoking history and family medical history.",
+      "action": ""
+    },
+    {
+      "speaker": "Doctor",
+      "speech": "Based on your symptoms and medical history, we'll need to conduct some tests to determine the cause of your symptoms. We'll start with a chest X-ray and possibly a CT scan to get a closer look. I understand this may be overwhelming, but we're here to support you every step of the way.",
+      "action": "Completes the intake process and orders further diagnostic tests"
+    },
+    {
+      "speaker": "Sarah",
+      "speech": "Thank you, doctor. I just want to know what's going on so we can address it.",
+      "action": ""
+    },
+    {
+      "speaker": "Doctor",
+      "speech": "Absolutely, Sarah. We'll take it one step at a time. Our goal is to get to the bottom of your symptoms and develop a personalized treatment plan tailored to your needs. I'll be with you every step of the way.",
+      "action": ""
+    }
+  ]
+} 
 ```
 
 ----
